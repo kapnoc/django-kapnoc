@@ -19,7 +19,7 @@ from .models import Image
 
 def get_image_by_name(request, name):
     try:
-        image = Image.objects.get(name=name)
+        image = Image.objects.get(name_unique=name)
     except ObjectDoesNotExist:
         raise Http404('Image does not exist')
     return redirect(image.image.url)
@@ -27,7 +27,7 @@ def get_image_by_name(request, name):
 
 def get_thumbnail_by_name(request, name, thumb_type):
     try:
-        image = Image.objects.get(name=name)
+        image = Image.objects.get(name_unique=name)
     except ObjectDoesNotExist:
         raise Http404('Image does not exist')
     available_thumb_types = settings.THUMBNAIL_ALIASES[''].keys()
@@ -77,7 +77,7 @@ def markdown_uploader(request):
             data = json.dumps({
                 'status': 200,
                 'link': image_url,
-                'name': image_db.name
+                'name': image_db.name_unique
             })
             return HttpResponse(data, content_type='application/json')
         return HttpResponse(_('Invalid request!'))

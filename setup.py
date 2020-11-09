@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="django-kapnoc",
-    version="0.0.4",
+    version="0.0.5",
     author="Tanguy Gérôme",
     author_email="tanguy.gerome@gmail.com",
     description="Personnal helpers",
