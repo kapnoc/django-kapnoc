@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="django-kapnoc",  # Replace with your own username
-    version="0.0.3",
+    name="django-kapnoc",
+    version="0.0.4",
     author="Tanguy Gérôme",
     author_email="tanguy.gerome@gmail.com",
     description="Personnal helpers",

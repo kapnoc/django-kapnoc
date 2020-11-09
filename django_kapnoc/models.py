@@ -15,7 +15,7 @@ class Tag(models.Model):
 class MarkdownPage(models.Model):
     title = models.CharField(max_length=255)
     tags = models.ManyToManyField(Tag)
-    body = MartorField(verbose_name='body')
+    body = MartorField()
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField()
 
