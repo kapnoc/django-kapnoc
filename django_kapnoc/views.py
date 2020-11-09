@@ -66,7 +66,6 @@ def markdown_uploader(request):
                 return HttpResponse(
                     data, content_type='application/json', status=405)
 
-            # ALED
             image_uuid = "{0}-{1}".format(
                 uuid.uuid4().hex[:10], image.name.replace(' ', '-'))
             image_db = Image(name=image_uuid,

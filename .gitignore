@@ -2,3 +2,6 @@ __pycache__/
 env/
 dist/
 django_kapnoc.egg-info/
+
+*.sqlite3
+images/
